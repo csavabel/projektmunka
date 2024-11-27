@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szolgáltatások</title>
+    <meta name="description"
+        content="Foglalja le szállását a Nyírfa Liget Birtokon! Kényelmes, vidéki környezet, amely tökéletes pihenést és kikapcsolódást biztosít. Könnyen foglalhat online, akár egy kattintással!">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <!-- Navigation -->
+        <nav class="navbar" aria-label="Fő navigáció">
+
+            <a href="index.html" class="logo" aria-label="Nyírfa Liget főoldal">
+                <img src="img/logo.png" alt="Nyírfa Liget Birtok Logo">
+            </a>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="szolgaltatasok.html" aria-label="Szolgáltatások oldal">Szolgáltatások</a>
+                    <ul class="submenu" aria-label="Szolgáltatások almenü">
+                        <li><a href="szolgaltatasok.html#szolg-szallas" aria-label="Szállás szolgáltatás">Szállás</a>
+                        </li>
+                        <li><a href="szolgaltatasok.html#szolg-etkezes" aria-label="Étkezés szolgáltatás">Étkezés</a>
+                        </li>
+                        <li><a href="szolgaltatasok.html#szolg-programok"
+                                aria-label="Programok szolgáltatás">Programok</a></li>
+                        <li><a href="szolgaltatasok.html#szolg-lovaglas" aria-label="Lovaglás szolgáltatás">Lovaglás</a>
+                        </li>
+                        <li><a href="szolgaltatasok.html#szolg-szabadter"
+                                aria-label="Szabadtéri élmények szolgáltatás">Szabadtéri élmények</a></li>
+                        <li><a href="szolgaltatasok.html#szolg-csapatep"
+                                aria-label="Csapatépítés szolgáltatás">Csapatépítés</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeria.html" aria-label="Galéria oldal">Galéria</a></li>
+                <li><a href="kapcsolat.html" aria-label="Kapcsolat oldal">Kapcsolat</a></li>
+                <li><a href="foglalas.html" aria-label="Foglalás oldal">Foglalás</a></li>
+            </ul>
+
+            <div class="mobile-menu-icon" aria-label="Mobil menü ikon" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="mobile-menu" aria-hidden="true">
+                <button class="close-button" aria-label="Menü bezárása">&times;</button>
+                <ul>
+                    <li><a href="index.html" aria-label="Főoldal">Főoldal</a></li>
+                    <li><a href="szolgaltatasok.html" aria-label="Szolgáltatások oldal">Szolgáltatások</a></li>
+                    <li><a href="galeria.html" aria-label="Galéria oldal">Galéria</a></li>
+                    <li><a href="kapcsolat.html" aria-label="Kapcsolat oldal">Kapcsolat</a></li>
+                    <li><a href="foglalas.html" aria-label="Foglalás oldal">Foglalás</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <section class="foglalas">
+                <h2>Foglaljon most és élvezze a vidéki nyugalmat!</h2>
+                <p>Üdvözöljük a foglalási oldalon! A Nyírfa Liget Birtokon való tartózkodás egy igazán különleges
+                    élmény. Itt lehetősége van arra, hogy pihenjen a természet ölelésében, részt vegyen különböző
+                    programjainkon, és élvezze a házias ételeinket. Töltse el nálunk az idejét, és garantáltan
+                    feltöltődve térhet haza. Kérjük, válassza ki a kívánt szolgáltatásokat, és foglalja le szállását egy
+                    pár egyszerű lépésben!</p>
+
+                <div class="foglalas-form">
+                    <h3>Foglaljon szállást:</h3>
+
+                    <!-- Kiválasztási lehetőség -->
+                    <form id="reservation-form">
+                        <div class="form-group">
+                            <label for="checkin-date">Bejelentkezés dátuma:</label>
+                            <input type="date" id="checkin-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-date">Kijelentkezés dátuma:</label>
+                            <input type="date" id="checkout-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="num-guests">Vendégek száma:</label>
+                            <input type="number" id="num-guests" min="1" required>
+                        </div>
+
+                        <!-- Programok választása -->
+                        <h3>Válassza ki az Ön által kívánt programokat:</h3>
+                        <div class="programs">
+                            <input type="checkbox" id="lovaglas" value="Lovaglás">
+                            <label for="lovaglas">Lovaglás</label>
+
+                            <input type="checkbox" id="tura" value="Túra">
+                            <label for="tura">Túra</label>
+
+                            <input type="checkbox" id="etkezes" value="Étkezés">
+                            <label for="etkezes">Házi étkezés</label>
+
+                            <input type="checkbox" id="programok" value="Egyéb programok">
+                            <label for="programok">Egyéb programok</label>
+                        </div>
+
+                        <!-- Foglalás megerősítése -->
+                        <div class="form-group">
+                            <button type="button" id="confirm-booking" onclick="confirmReservation()">Foglalás
+                                megerősítése</button>
+                        </div>
+                    </form>
+
+                    <div id="booking-summary" class="booking-summary" style="display:none;">
+                        <h3>Foglalás Összegzése:</h3>
+                        <p id="selected-dates"></p>
+                        <p id="num-guests-summary"></p>
+                        <p id="selected-programs"></p>
+                        <button onclick="confirmFinalBooking()">Foglalás véglegesítése</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="adatvedelmi-nyilatkozat.html" target="_blank">Adatvédelmi Nyilatkozat</a> | <a
+                    href="felhasznalasi-feltetelek.html" target="_blank">Felhasználási Feltételek</a></p>
+            <p>© 2024 Nyírfa Liget Birtok. Minden jog fenntartva.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook oldalunk">Facebook</a> |
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram oldalunk">Instagram</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script/menu.js"></script>
+    <script src="script/booking.js"></script>
+
+</body>
+
+</html>

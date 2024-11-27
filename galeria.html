@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szolgáltatások</title>
+    <meta name="description"
+        content="Fedezze fel a Nyírfa Liget Birtok csodálatos környezetét! Tekintse meg galériánkban a birtokunkról készült képeket, és merüljön el a természet varázslatos világában.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+         <!-- Navigation -->
+         <nav class="navbar" aria-label="Fő navigáció">
+
+            <a href="index.html" class="logo" aria-label="Nyírfa Liget főoldal">
+                <img src="img/logo.png" alt="Nyírfa Liget Birtok Logo">
+            </a>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="szolgaltatasok.html" aria-label="Szolgáltatások oldal">Szolgáltatások</a>
+                    <ul class="submenu" aria-label="Szolgáltatások almenü">
+                        <li><a href="szolgaltatasok.html#szolg-szallas" aria-label="Szállás szolgáltatás">Szállás</a></li>
+                        <li><a href="szolgaltatasok.html#szolg-etkezes" aria-label="Étkezés szolgáltatás">Étkezés</a></li>
+                        <li><a href="szolgaltatasok.html#szolg-programok" aria-label="Programok szolgáltatás">Programok</a></li>
+                        <li><a href="szolgaltatasok.html#szolg-lovaglas" aria-label="Lovaglás szolgáltatás">Lovaglás</a></li>
+                        <li><a href="szolgaltatasok.html#szolg-szabadter" aria-label="Szabadtéri élmények szolgáltatás">Szabadtéri élmények</a></li>
+                        <li><a href="szolgaltatasok.html#szolg-csapatep" aria-label="Csapatépítés szolgáltatás">Csapatépítés</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeria.html" aria-label="Galéria oldal">Galéria</a></li>
+                <li><a href="kapcsolat.html" aria-label="Kapcsolat oldal">Kapcsolat</a></li>
+                <li><a href="foglalas.html" aria-label="Foglalás oldal">Foglalás</a></li>
+            </ul>
+
+            <div class="mobile-menu-icon" aria-label="Mobil menü ikon" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="mobile-menu" aria-hidden="true">
+                <button class="close-button" aria-label="Menü bezárása">&times;</button>
+                <ul>
+                    <li><a href="index.html" aria-label="Főoldal">Főoldal</a></li>
+                    <li><a href="szolgaltatasok.html" aria-label="Szolgáltatások oldal">Szolgáltatások</a></li>
+                    <li><a href="galeria.html" aria-label="Galéria oldal">Galéria</a></li>
+                    <li><a href="kapcsolat.html" aria-label="Kapcsolat oldal">Kapcsolat</a></li>
+                    <li><a href="foglalas.html" aria-label="Foglalás oldal">Foglalás</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <section id="gallery" class="gallery">
+                <h2>Fedezze fel a Nyírfa Liget Birtok varázslatos pillanatait!</h2>
+                <p>Üdvözöljük a Nyírfa Liget Birtok galériájában! Itt betekintést nyerhet a birtok csodálatos tájaiba, az évről évre változó szezonokban...</p>
+            
+                <div class="gallery-controls">
+                    <button id="prev-button" class="prev-button">Előző</button>
+                    <button id="next-button" class="next-button">Következő</button>
+                </div>
+            
+                <!-- Main image section -->
+                <div class="main-image-container">
+                    <img id="main-image" src="img/csirke.jpg" alt="Fő kép" class="main-image">
+                </div>
+            
+                <!-- Thumbnail grid -->
+                <div class="gallery-grid">
+                    <img src="img/csirke.jpg" alt="csirke" class="thumbnail" onclick="updateMainImage(0)">
+                    <img src="img/haz.jpg" alt="ház" class="thumbnail" onclick="updateMainImage(1)">
+                    <img src="img/hus.jpg" alt="húsok" class="thumbnail" onclick="updateMainImage(2)">
+                    <img src="img/kecske.jpg" alt="kecske" class="thumbnail" onclick="updateMainImage(3)">
+                    <img src="img/lovaglas.jpg" alt="lovaglás" class="thumbnail" onclick="updateMainImage(4)">
+                    <img src="img/paci.jpg" alt="paci" class="thumbnail" onclick="updateMainImage(5)">
+                    <img src="img/ret.jpg" alt="réti kép" class="thumbnail" onclick="updateMainImage(6)">
+                    <img src="img/rofi.jpg" alt="róka" class="thumbnail" onclick="updateMainImage(7)">
+                    <img src="img/sajt.jpg" alt="sajt" class="thumbnail" onclick="updateMainImage(8)">
+                    <img src="img/szallas.jpg" alt="szállás" class="thumbnail" onclick="updateMainImage(9)">
+                    <img src="img/szamar.jpg" alt="szamár" class="thumbnail" onclick="updateMainImage(10)">
+                    <img src="img/szorp.jpg" alt="szörp" class="thumbnail" onclick="updateMainImage(11)">
+                    <img src="img/tanyahaz.jpg" alt="tanyaház" class="thumbnail" onclick="updateMainImage(12)">
+                    <img src="img/tura.jpg" alt="túra" class="thumbnail" onclick="updateMainImage(13)">
+                    <img src="img/tyukok.jpg" alt="tyúkok" class="thumbnail" onclick="updateMainImage(14)">
+                    <img src="img/anna.jpg" alt="Anna" class="thumbnail" onclick="updateMainImage(14)">
+                </div>
+            </section>
+            
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="adatvedelmi-nyilatkozat.html" target="_blank">Adatvédelmi Nyilatkozat</a> | <a
+                    href="felhasznalasi-feltetelek.html" target="_blank">Felhasználási Feltételek</a></p>
+            <p>© 2024 Nyírfa Liget Birtok. Minden jog fenntartva.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook oldalunk">Facebook</a> |
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram oldalunk">Instagram</a>
+            </div>            
+        </footer>
+
+    </div>
+
+    <script src="script/menu.js"></script>
+    <script src="script/gallery.js"></script>
+</body>
+
+</html>

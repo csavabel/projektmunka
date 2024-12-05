@@ -24,21 +24,6 @@ mobileMenuIcon.addEventListener('click', function () {
     const isOpen = mobileMenu.classList.contains('open');
     mobileMenu.setAttribute('aria-hidden', !isOpen);
     mobileMenuIcon.setAttribute('aria-expanded', isOpen);
-
-    // Ha a mobil menü nyitva van, fix pozícióra állítjuk
-    if (isOpen) {
-        mobileMenu.style.position = 'fixed';
-        mobileMenu.style.top = '0';
-        mobileMenu.style.left = '0';
-        mobileMenu.style.width = '100%';
-        mobileMenu.style.height = '100vh'; // Az egész képernyőt lefedi
-    } else {
-        mobileMenu.style.position = ''; // Visszaállítjuk az alapértelmezett stílust
-        mobileMenu.style.top = '';
-        mobileMenu.style.left = '';
-        mobileMenu.style.width = '';
-        mobileMenu.style.height = '';
-    }
 });
 
 // Menü bezárása a "X" gombbal
@@ -48,11 +33,4 @@ closeButton.addEventListener('click', function () {
     mobileMenu.classList.remove('open'); // Menü bezárása
     mobileMenu.setAttribute('aria-hidden', 'true');
     mobileMenuIcon.setAttribute('aria-expanded', 'false');
-    
-    // Bezáráskor visszaállítjuk a menü pozícióját
-    mobileMenu.style.position = '';
-    mobileMenu.style.top = '';
-    mobileMenu.style.left = '';
-    mobileMenu.style.width = '';
-    mobileMenu.style.height = '';
 });

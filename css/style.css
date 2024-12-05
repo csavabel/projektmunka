@@ -231,15 +231,19 @@ nav .mobile-menu-icon span {
 }
 
 nav .mobile-menu {
-    display: none;
-    position: fixed;
+    display: none; 
+    flex-direction: column;
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    overflow-y: auto;
+    height: 100vh; 
+    background: rgba(0, 0, 0, 0.8); 
+    z-index: 9999; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0;
+    box-shadow: none;
     transition: opacity 0.3s ease;
 }
 
@@ -258,7 +262,7 @@ nav .mobile-menu li {
 nav .mobile-menu li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     display: block;
     transition: color 0.3s ease;
@@ -267,6 +271,7 @@ nav .mobile-menu li a {
 nav .mobile-menu li a:hover {
     color: #f9f9f9;
 }
+
 
 /* Close Button Stílus */
 .mobile-menu .close-button {
@@ -441,7 +446,6 @@ footer .social-links a:hover {
     border-left: 5px solid #6c757d;
     text-align: center; 
 }
-
 
 .bemutatkozas h2, .elmenyek h2, .lehetosegek h2, .velemenyek h2 {
     font-size: 2rem;
@@ -883,57 +887,61 @@ iframe {
 
 @media (max-width: 1024px) {
     .main-container {
-        grid-template-columns: repeat(8, 1fr); /* Kisebb képernyőkön 8 oszlop */
+        grid-template-columns: repeat(8, 1fr); 
     }
     main {
-        grid-column: 1 / -1; /* A fő tartalom teljes szélesség */
+        grid-column: 1 / -1; 
     }
     aside.lehetosegek {
-        grid-column: 1 / -1; /* Az oldalsáv teljes szélesség */
+        grid-column: 1 / -1; 
+    }
+
+    aside.velemenyek {
+        grid-column: 1 / -1; 
     }
 }
 
 @media (max-width: 768px) {
     .main-container {
-        grid-template-columns: repeat(6, 1fr); /* Még kisebb képernyőkön 6 oszlop */
+        grid-template-columns: repeat(6, 1fr);
     }
     main {
-        grid-column: 1 / -1; /* A fő tartalom teljes szélesség */
+        grid-column: 1 / -1; 
     }
     aside.lehetosegek {
-        grid-column: 1 / -1; /* Az oldalsáv teljes szélesség */
+        grid-column: 1 / -1; 
     }
 }
 
 @media (max-width: 480px) {
     .main-container {
-        grid-template-columns: 1fr; /* Mobilon egy oszlopos elrendezés */
+        grid-template-columns: 1fr; 
         gap: 10px;
     }
     nav {
-        grid-column: 1 / -1; /* Navigáció mobilon is teljes szélesség */
+        grid-column: 1 / -1; 
     }
     aside.velemenyek {
-        grid-column: 1 / -1; /* Vélemények teljes szélesség */
+        grid-column: 1 / -1; 
     }
 }
 
 /* Menü */
 @media (max-width: 768px) {
     nav ul.menu {
-        display: none; /* Normál menü elrejtése mobil nézetben */
+        display: none; 
     }
 
     nav .mobile-menu-icon {
-        display: flex; /* Mobil ikon megjelenítése */
+        display: flex; 
     }
     
     nav .mobile-menu.open {
-        display: flex; /* Menü megjelenítése, ha aktiválva van */
+        display: flex; 
     }
 
     nav .mobile-menu {
-        display: none; /* Alapértelmezett rejtett menü */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 0;
@@ -944,3 +952,4 @@ iframe {
         padding: 20px 0;
     }
 }
+

@@ -22,5 +22,4 @@ nextButton.addEventListener('click', () => {
     showTestimonial(currentIndex);
 });
 
-// Kezdeti tesztimónia megjelenítése
 showTestimonial(currentIndex);

@@ -1,12 +1,10 @@
-// Ellenőrzés, hogy a felhasználó már elfogadta-e a sütiket
 if (!localStorage.getItem('cookiesAccepted')) {
-    document.querySelector('.cookie-banner').style.display = 'block'; // Banner megjelenítése
+    document.querySelector('.cookie-banner').style.display = 'block'; 
 } else {
-    document.querySelector('.cookie-banner').style.display = 'none'; // Banner elrejtése
+    document.querySelector('.cookie-banner').style.display = 'none'; 
 }
 
-// A "Rendben" gombra kattintás után a banner elrejtése
 function acceptCookies() {
-    localStorage.setItem('cookiesAccepted', 'true'); // Beállítja, hogy a felhasználó elfogadta
-    document.querySelector('.cookie-banner').style.display = 'none'; // Banner eltüntetése
+    localStorage.setItem('cookiesAccepted', 'true'); 
+    document.querySelector('.cookie-banner').style.display = 'none';
 }
